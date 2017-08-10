@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 TARGET_DIR=~/bin/debian-basic-install
 GIT_SOURCE="https://github.com/martin-hoger/debian-basic-install"
@@ -19,7 +18,7 @@ fi
 
 echo
 echo "Install scripts"
-cd $SCRIPT_DIR
+cd $TARGET_DIR
 # http://unix.stackexchange.com/questions/50634/requesting-user-input-while-reading-file-line-by-line
 # http://compgroups.net/comp.unix.shell/fixing-stdin-inside-a-redirected-loop/400460
 exec 3< <(ls -1 scripts/*.sh 2> /dev/null)
